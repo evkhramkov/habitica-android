@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#f9f9f9"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/divider_name"
+        style="@style/Body2_Wide"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="13dp"
+        android:layout_marginTop="24dp"
         android:textAllCaps="true"
-        style="@style/Body2_Wide"
-        tools:text="Challenge"
-        android:id="@+id/divider_name"/>
+        tools:text="Challenge" />
 
 </LinearLayout>

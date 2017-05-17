@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:bind="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <import type="com.habitrpg.android.habitica.models.user.Preferences" />
+
         <import type="android.view.View" />
 
         <variable
@@ -25,132 +27,155 @@
             android:paddingBottom="?attr/actionBarSize">
 
             <TextView
+                style="@style/SectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/SectionTitle"
                 android:text="@string/avatar_body"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <android.support.v7.widget.CardView
+                style="@style/CardView.Default"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/CardView.Default">
+                android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:divider="?android:listDivider"
+                    android:orientation="vertical"
                     android:showDividers="middle">
+
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp">
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:id="@+id/textView3"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
                             android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
-                            android:text="@string/avatar_size"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:gravity="center_vertical"
+                            android:text="@string/avatar_size"
                             android:textStyle="bold" />
 
                         <Spinner
+                            android:id="@+id/avatar_size_spinner"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:id="@+id/avatar_size_spinner"
-                            android:spinnerMode="dropdown"
-                            android:layout_marginRight="8dp"
                             android:layout_marginEnd="8dp"
-                            android:entries="@array/avatar_sizes"/>
+                            android:layout_marginRight="8dp"
+                            android:entries="@array/avatar_sizes"
+                            android:spinnerMode="dropdown" />
                     </LinearLayout>
-                    <include layout="@layout/item_image_row"
+
+                    <include
                         android:id="@+id/avatar_shirt"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getSize + "_shirt_" + preferences.getShirt}'
                         bind:title="@{@string/avatar_shirt}"
-                        bind:value="@{preferences.getShirt}"
-                        bind:imageNamed='@{preferences.getSize + "_shirt_" + preferences.getShirt}'/>
-                    <include layout="@layout/item_image_row"
+                        bind:value="@{preferences.getShirt}" />
+
+                    <include
                         android:id="@+id/avatar_skin"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{"skin_" + preferences.getSkin}'
                         bind:title="@{@string/avatar_skin}"
-                        bind:value="@{preferences.getSkin}"
-                        bind:imageNamed='@{"skin_" + preferences.getSkin}' />
+                        bind:value="@{preferences.getSkin}" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
             <TextView
+                style="@style/SectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/avatar_hair"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                style="@style/SectionTitle"/>
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <android.support.v7.widget.CardView
+                style="@style/CardView.Default"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/CardView.Default">
+                android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:divider="?android:listDivider"
+                    android:orientation="vertical"
                     android:showDividers="middle">
-                    <include layout="@layout/item_image_row"
+
+                    <include
                         android:id="@+id/avatar_hair_color"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{"hair_bangs_1_" + preferences.getHair.getColor}'
                         bind:title="@{@string/avatar_color}"
-                        bind:value="@{preferences.getHair.getColor}"
-                        bind:imageNamed='@{"hair_bangs_1_" + preferences.getHair.getColor}' />
-                    <include layout="@layout/item_image_row"
+                        bind:value="@{preferences.getHair.getColor}" />
+
+                    <include
                         android:id="@+id/avatar_hair_base"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getHair.getBase == 0 ? null : "hair_base_" + preferences.getHair.getBase + "_" + preferences.getHair.getColor}'
                         bind:title="@{@string/avatar_base}"
-                        bind:valueInt="@{preferences.getHair.getBase}"
-                        bind:imageNamed='@{preferences.getHair.getBase == 0 ? null : "hair_base_" + preferences.getHair.getBase + "_" + preferences.getHair.getColor}' />
-                    <include layout="@layout/item_image_row"
+                        bind:valueInt="@{preferences.getHair.getBase}" />
+
+                    <include
                         android:id="@+id/avatar_hair_bangs"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getHair.getBangs == 0 ? null : "hair_bangs_" + preferences.getHair.getBangs + "_" + preferences.getHair.getColor}'
                         bind:title="@{@string/avatar_bangs}"
-                        bind:valueInt="@{preferences.getHair.getBangs}"
-                        bind:imageNamed='@{preferences.getHair.getBangs == 0 ? null : "hair_bangs_" + preferences.getHair.getBangs + "_" + preferences.getHair.getColor}' />
-                    <include layout="@layout/item_image_row"
+                        bind:valueInt="@{preferences.getHair.getBangs}" />
+
+                    <include
                         android:id="@+id/avatar_hair_flower"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getHair.getFlower == 0 ? null : "hair_flower_" + preferences.getHair.getFlower}'
                         bind:title="@{@string/avatar_flower}"
-                        bind:valueInt="@{preferences.getHair.getFlower}"
-                        bind:imageNamed='@{preferences.getHair.getFlower == 0 ? null : "hair_flower_" + preferences.getHair.getFlower}' />
-                    <include layout="@layout/item_image_row"
+                        bind:valueInt="@{preferences.getHair.getFlower}" />
+
+                    <include
                         android:id="@+id/avatar_hair_beard"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getHair.getBeard == 0 ? null : "hair_beard_" + preferences.getHair.getBeard + "_" + preferences.getHair.getColor}'
                         bind:title="@{@string/avatar_beard}"
-                        bind:valueInt="@{preferences.getHair.getBeard}"
-                        bind:imageNamed='@{preferences.getHair.getBeard == 0 ? null : "hair_beard_" + preferences.getHair.getBeard + "_" + preferences.getHair.getColor}' />
-                    <include layout="@layout/item_image_row"
+                        bind:valueInt="@{preferences.getHair.getBeard}" />
+
+                    <include
                         android:id="@+id/avatar_hair_mustache"
+                        layout="@layout/item_image_row"
+                        bind:imageNamed='@{preferences.getHair.getMustache == 0 ? null : "hair_mustache_" + preferences.getHair.getMustache + "_" + preferences.getHair.getColor}'
                         bind:title="@{@string/avatar_mustache}"
-                        bind:valueInt="@{preferences.getHair.getMustache}"
-                        bind:imageNamed='@{preferences.getHair.getMustache == 0 ? null : "hair_mustache_" + preferences.getHair.getMustache + "_" + preferences.getHair.getColor}' />
+                        bind:valueInt="@{preferences.getHair.getMustache}" />
                 </LinearLayout>
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/avatar_background"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            style="@style/SectionTitle"/>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardView.Default">
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <include layout="@layout/avatar_background_overview_card"
-                    android:id="@+id/avatar_background"
-                    bind:text="@{preferences.getBackground}"
-                    bind:imageNamed='@{"background_" + preferences.getBackground}' />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
+                android:text="@string/avatar_background"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <android.support.v7.widget.CardView
+                style="@style/CardView.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/avatar_background"
+                        layout="@layout/avatar_background_overview_card"
+                        bind:imageNamed='@{"background_" + preferences.getBackground}'
+                        bind:text="@{preferences.getBackground}" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </layout>

@@ -90,9 +90,9 @@
                             android:layout_marginBottom="10dp"
 
                             android:layout_marginEnd="23dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginRight="23dp"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="10dp"
                             android:orientation="horizontal"
                             android:weightSum="2">
@@ -108,8 +108,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="left|center"
-                                    android:paddingTop="3dp"
                                     android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
                                     android:text="Show more"
                                     android:textAllCaps="false"
                                     android:textColor="#d0c1ff" />
@@ -132,8 +132,8 @@
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="36dp"
-                                        android:src="@drawable/ic_header_gem"
-                                        android:layout_marginRight="5dp"/>
+                                        android:layout_marginRight="5dp"
+                                        android:src="@drawable/ic_header_gem" />
 
                                     <TextView
                                         android:id="@+id/gem_amount"

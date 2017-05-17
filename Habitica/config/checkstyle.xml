@@ -27,7 +27,7 @@ Severity: EASY
     <!-- Checks for whitespace                               -->
     <!-- See http://checkstyle.sourceforge.net/config_whitespace.html -->
     <module name="FileTabCharacter">
-        <property name="eachLine" value="true"/>
+        <property name="eachLine" value="true" />
     </module>
 
     <!-- Miscellaneous other checks.                   -->
@@ -45,7 +45,7 @@ Severity: EASY
         <module name="AnnotationLocation" />
 
         <module name="AnonInnerLength">
-          <property name="max" value="60"/>
+            <property name="max" value="60" />
         </module>
 
         <!-- Checks for Javadoc comments.                     -->
@@ -78,21 +78,21 @@ Severity: EASY
         <module name="ConstantName" />
         <module name="LocalFinalVariableName" />
         <module name="LocalVariableName">
-            <property name="allowOneCharVarInForLoop" value="true"/>
+            <property name="allowOneCharVarInForLoop" value="true" />
         </module>
         <module name="MemberName">
-          <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$" />
         </module>
         <module name="MethodName" />
         <module name="PackageName">
-            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$" />
         </module>
         <module name="ParameterName">
-            <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$"/>
-            <property name="accessModifiers" value="public"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$" />
+            <property name="accessModifiers" value="public" />
         </module>
         <module name="StaticVariableName">
-            <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9][a-zA-Z0-9]*$" />
         </module>
         <module name="TypeName" />
 
@@ -117,38 +117,38 @@ Severity: EASY
         <!-- See http://checkstyle.sourceforge.net/config_whitespace.html -->
         <module name="EmptyForIteratorPad" />
         <module name="EmptyLineSeparator">
-            <property name="allowNoEmptyLineBetweenFields" value="true"/>
+            <property name="allowNoEmptyLineBetweenFields" value="true" />
         </module>
         <module name="GenericWhitespace" />
         <module name="MethodParamPad" />
-        <module name="NoLineWrap"/>
+        <module name="NoLineWrap" />
         <module name="NoWhitespaceAfter">
-          <property name="tokens" value="ARRAY_INIT"/>
-          <property name="tokens" value="BNOT"/>
-          <property name="tokens" value="DEC"/>
-          <property name="tokens" value="DOT"/>
-          <property name="tokens" value="INC"/>
-          <property name="tokens" value="LNOT"/>
-          <property name="tokens" value="UNARY_MINUS"/>
-          <property name="tokens" value="UNARY_PLUS"/>
-          <property name="tokens" value="ARRAY_DECLARATOR"/>
+            <property name="tokens" value="ARRAY_INIT" />
+            <property name="tokens" value="BNOT" />
+            <property name="tokens" value="DEC" />
+            <property name="tokens" value="DOT" />
+            <property name="tokens" value="INC" />
+            <property name="tokens" value="LNOT" />
+            <property name="tokens" value="UNARY_MINUS" />
+            <property name="tokens" value="UNARY_PLUS" />
+            <property name="tokens" value="ARRAY_DECLARATOR" />
         </module>
-        <module name="NoWhitespaceBefore"/>
+        <module name="NoWhitespaceBefore" />
         <module name="SeparatorWrap">
-            <property name="tokens" value="COMMA"/>
-            <property name="option" value="eol"/>
+            <property name="tokens" value="COMMA" />
+            <property name="option" value="eol" />
         </module>
         <module name="SeparatorWrap">
-            <property name="tokens" value="DOT"/>
-            <property name="option" value="nl"/>
+            <property name="tokens" value="DOT" />
+            <property name="option" value="nl" />
         </module>
-        <module name="SingleSpaceSeparator"/>
+        <module name="SingleSpaceSeparator" />
         <module name="OperatorWrap" />
         <module name="ParenPad" />
         <module name="TypecastParenPad" />
         <module name="WhitespaceAfter" />
         <module name="WhitespaceAround">
-          <property name="allowEmptyLambdas" value="true" />
+            <property name="allowEmptyLambdas" value="true" />
         </module>
 
         <!-- Modifier Checks                                    -->
@@ -164,13 +164,13 @@ Severity: EASY
         <!-- Checks for blocks. You know, those {}'s         -->
         <!-- See http://checkstyle.sourceforge.net/config_blocks.html -->
         <module name="AvoidNestedBlocks">
-          <property name="allowInSwitchCase" value="true" />
+            <property name="allowInSwitchCase" value="true" />
         </module>
         <module name="EmptyBlock">
-          <property name="option" value="text" />
+            <property name="option" value="text" />
         </module>
         <module name="EmptyCatchBlock">
-          <property name="exceptionVariableName" value="expected|ignore"/>
+            <property name="exceptionVariableName" value="expected|ignore" />
         </module>
         <module name="LeftCurly" />
         <module name="NeedBraces" />
@@ -179,55 +179,56 @@ Severity: EASY
 
         <!-- Checks for common coding problems               -->
         <!-- See http://checkstyle.sourceforge.net/config_coding.html -->
-        <module name="ArrayTrailingComma"/>
-        <module name="CovariantEquals"/>
-        <module name="DeclarationOrder"/>
-        <module name="DefaultComesLast"/>
+        <module name="ArrayTrailingComma" />
+        <module name="CovariantEquals" />
+        <module name="DeclarationOrder" />
+        <module name="DefaultComesLast" />
         <module name="EmptyStatement" />
-        <module name="EqualsAvoidNull"/>
+        <module name="EqualsAvoidNull" />
         <module name="EqualsHashCode" />
-        <module name="FallThrough"/>
+        <module name="FallThrough" />
         <module name="HiddenField">
-          <property name="ignoreConstructorParameter" value="true"/>
-          <property name="ignoreSetter" value="true"/>
+            <property name="ignoreConstructorParameter" value="true" />
+            <property name="ignoreSetter" value="true" />
         </module>
-        <module name="IllegalCatch"/>
+        <module name="IllegalCatch" />
         <module name="IllegalInstantiation">
-          <property name="classes" value="java.lang.Boolean"/>
+            <property name="classes" value="java.lang.Boolean" />
         </module>
-        <module name="IllegalThrows"/>
-        <module name="IllegalType"/>
+        <module name="IllegalThrows" />
+        <module name="IllegalType" />
         <module name="InnerAssignment" />
         <module name="MagicNumber">
             <property name="severity" value="ignore" />
-            <property name="ignoreNumbers" value="-1, 0, 1, 2, 3, 4, 5, 8, 10, 12, 16, 24, 30, 32, 60, 64, 100, 120, 128, 180, 256, 360, 1000" />
+            <property name="ignoreNumbers"
+                value="-1, 0, 1, 2, 3, 4, 5, 8, 10, 12, 16, 24, 30, 32, 60, 64, 100, 120, 128, 180, 256, 360, 1000" />
         </module>
         <module name="MissingSwitchDefault" />
         <module name="MultipleStringLiterals">
-          <property name="allowedDuplicates" value="2"/>
-          <property name="ignoreStringsRegexp" value='^(("")|(", "))$'/>
+            <property name="allowedDuplicates" value="2" />
+            <property name="ignoreStringsRegexp" value='^(("")|(", "))$' />
         </module>
-        <module name="MultipleVariableDeclarations"/>
+        <module name="MultipleVariableDeclarations" />
         <module name="NestedForDepth">
-            <property name="max" value="2"/>
+            <property name="max" value="2" />
         </module>
-        <module name="NoClone"/>
-        <module name="NoFinalizer"/>
-        <module name="OneStatementPerLine"/>
-        <module name="PackageDeclaration"/>
-        <module name="ParameterAssignment"/>
-        <module name="RequireThis"/>
+        <module name="NoClone" />
+        <module name="NoFinalizer" />
+        <module name="OneStatementPerLine" />
+        <module name="PackageDeclaration" />
+        <module name="ParameterAssignment" />
+        <module name="RequireThis" />
         <module name="SimplifyBooleanExpression" />
         <module name="SimplifyBooleanReturn" />
-        <module name="StringLiteralEquality"/>
+        <module name="StringLiteralEquality" />
 
 
         <!-- Checks for class design                         -->
         <!-- See http://checkstyle.sourceforge.net/config_design.html -->
         <module name="HideUtilityClassConstructor" />
-        <module name="InnerTypeLast"/>
+        <module name="InnerTypeLast" />
         <module name="InterfaceIsType" />
-        <module name="OneTopLevelClass"/>
+        <module name="OneTopLevelClass" />
         <module name="VisibilityModifier">
             <property name="severity" value="ignore" />
         </module>
@@ -236,8 +237,8 @@ Severity: EASY
         <!-- Miscellaneous other checks.                   -->
         <!-- See http://checkstyle.sourceforge.net/config_misc.html -->
         <module name="ArrayTypeStyle" />
-        <module name="CommentsIndentation"/>
-        <module name="OuterTypeFilename"/>
+        <module name="CommentsIndentation" />
+        <module name="OuterTypeFilename" />
         <module name="TodoComment">
             <property name="format" value="(?i)\s+TODO\s+" />
             <property name="severity" value="info" />
@@ -247,7 +248,6 @@ Severity: EASY
             <property name="severity" value="info" />
         </module>
         <module name="UpperEll" />
-
 
 
     </module>

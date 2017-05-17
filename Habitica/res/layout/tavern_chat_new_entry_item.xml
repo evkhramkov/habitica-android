@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,18 +15,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/emoji.toggle.btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_emoticon_grey600_24dp"
-            android:scaleType="center"
+            android:layout_gravity="center"
             android:backgroundTint="@color/transparent"
             android:contentDescription="Toogle Emojis"
-            android:layout_gravity="center"/>
+            android:scaleType="center"
+            android:src="@drawable/ic_emoticon_grey600_24dp" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
@@ -40,8 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="@string/write_message"
-                android:textColor="@android:color/black"
-                android:inputType="textCapSentences|textMultiLine" />
+                android:inputType="textCapSentences|textMultiLine"
+                android:textColor="@android:color/black" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -49,15 +49,16 @@
             android:id="@+id/btn.send.message"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:textColor="@color/white"
-            android:text="@string/post"
+            android:layout_gravity="center"
             android:drawableTint="@color/white"
-            android:layout_gravity="center"/>
+            android:text="@string/post"
+            android:textColor="@color/white" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/community_guidelines_view"
+        style="@style/Caption3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/read_community_guidelines"
-        style="@style/Caption3" />
+        android:text="@string/read_community_guidelines" />
 </LinearLayout>

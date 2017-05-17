@@ -21,32 +21,32 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/emoji.toggle.btn0"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_emoticon_grey600_24dp"
                     android:background="@drawable/md_transparent"
                     android:contentDescription="Toogle Emoji"
                     android:focusable="true"
-                    android:focusableInTouchMode="true" />
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/ic_emoticon_grey600_24dp" />
 
-                    <android.support.design.widget.TextInputLayout
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+                    <net.pherth.android.emoji_library.EmojiEditText
+                        android:id="@+id/task_text_edittext"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:hintTextAppearance="@style/TextAppearance.AppCompat">
-
-                        <net.pherth.android.emoji_library.EmojiEditText
-                            android:id="@+id/task_text_edittext"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:hint="@string/text"
-                            android:textColor="@android:color/black"
-                            android:inputType="textCapSentences" />
-                    </android.support.design.widget.TextInputLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="@string/text"
+                        android:inputType="textCapSentences"
+                        android:textColor="@android:color/black" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -58,9 +58,9 @@
                     android:id="@+id/emoji.toggle.btn1"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_emoticon_grey600_24dp"
                     android:background="@drawable/md_transparent"
-                    android:contentDescription="Toogle Emoji" />
+                    android:contentDescription="Toogle Emoji"
+                    android:src="@drawable/ic_emoticon_grey600_24dp" />
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -71,11 +71,11 @@
                         android:id="@+id/task_notes_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:hint="@string/notes"
-                    android:textColor="@android:color/black"
-                    android:inputType="textCapSentences|textMultiLine" />
-            </android.support.design.widget.TextInputLayout>
+                        android:layout_gravity="center_horizontal"
+                        android:hint="@string/notes"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColor="@android:color/black" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -90,15 +90,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:hint="@string/task_value"
-                    android:textColor="@android:color/black"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
+                android:id="@+id/task_difficulty_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/task_difficulty_wrapper">
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,11 +115,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/task_attribute_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="20dp"
-                android:id="@+id/task_attribute_wrapper">
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -145,27 +147,27 @@
             android:orientation="vertical">
 
             <TextView
-                 android:layout_width="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/actions"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
             <CheckBox
-                    android:id="@+id/task_positive_checkbox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="11dp"
-                    android:text="@string/positive_habit_form"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:id="@+id/task_positive_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:text="@string/positive_habit_form"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <CheckBox
-                    android:id="@+id/task_negative_checkbox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="11dp"
-                    android:text="@string/negative_habit_form"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            <CheckBox
+                android:id="@+id/task_negative_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:text="@string/negative_habit_form"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
 
@@ -198,9 +200,9 @@
                     android:id="@+id/emoji.toggle.btn2"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_emoticon_grey600_24dp"
                     android:background="@drawable/md_transparent"
-                    android:contentDescription="Toogle Emoji" />
+                    android:contentDescription="Toogle Emoji"
+                    android:src="@drawable/ic_emoticon_grey600_24dp" />
 
                 <net.pherth.android.emoji_library.EmojiEditText
                     android:id="@+id/new_checklist"
@@ -229,9 +231,9 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/frequency_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/frequency_title"
                 android:text="@string/frequency"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -299,9 +301,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:focusable="false"
                 android:hint="@string/start_date"
-                android:textColor="@android:color/black"
-                android:focusable="false" />
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -316,11 +318,11 @@
                 android:layout_height="72dp" />
 
             <TextView
+                android:id="@+id/repeatables_on_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/repeatables_on_title"
-                android:id="@+id/repeatables_on_title"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Spinner
@@ -349,18 +351,18 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/summaryTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/summaryTitle"
                 android:text="@string/repeatables_summary_title"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
+                android:id="@+id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>
@@ -390,33 +392,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:focusable="false"
                 android:hint="@string/add_reminder"
-                android:textColor="@android:color/black"
-                android:focusable="false" />
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/task_tags_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="20dp"
-            android:id="@+id/task_tags_wrapper">
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tags"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tags"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <LinearLayout
+                android:id="@+id/task_tags_checklist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/task_tags_checklist">
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
 
 
         <LinearLayout
@@ -431,8 +432,8 @@
                 android:id="@+id/btn.delete.task"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_action_delete_white_24"
                 android:drawableEnd="@drawable/ic_action_delete_white_24"
+                android:drawableRight="@drawable/ic_action_delete_white_24"
                 android:text="@string/action_delete"
                 android:textColor="@color/white" />
 

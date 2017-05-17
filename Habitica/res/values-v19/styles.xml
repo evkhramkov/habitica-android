@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppTheme.ActionBar.Transparent">
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -7,6 +8,7 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBarOverlay">true</item>
     </style>
+
     <style name="AppTheme.NoActionBar.Transparent">
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowTranslucentStatus">true</item>

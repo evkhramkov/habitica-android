@@ -56,9 +56,9 @@
             <net.pherth.android.emoji_library.EmojiTextView
                 android:id="@+id/checkedTextView"
                 style="@style/Subheader3"
-                android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#000"
                 tools:text="Habit Title" />
 
             <net.pherth.android.emoji_library.EmojiTextView
@@ -67,15 +67,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="3"
-                tools:text="Notes"/>
+                tools:text="Notes" />
 
             <TextView
-                    android:id="@+id/approvalRequiredTextField"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Caption4"
-                    android:text="@string/pending_approval"
-                    />
+                android:id="@+id/approvalRequiredTextField"
+                style="@style/Caption4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pending_approval" />
 
             <LinearLayout
                 android:id="@+id/taskIconWrapper"

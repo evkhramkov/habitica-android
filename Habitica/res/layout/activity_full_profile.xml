@@ -139,8 +139,8 @@
                     android:id="@+id/profile_blurb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-		    android:textIsSelectable="true"
-                    android:text="Blurb" />
+                    android:text="Blurb"
+                    android:textIsSelectable="true" />
 
                 <com.facebook.drawee.view.SimpleDraweeView
                     android:id="@+id/profile_image"
@@ -157,6 +157,7 @@
             style="@style/CardView.Default"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 style="@style/CardContent"
                 android:layout_width="match_parent"
@@ -169,22 +170,25 @@
                     android:layout_height="wrap_content"
                     android:text="@string/user_id"
                     android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <TextView
+                        android:id="@+id/userid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
-                        android:id="@+id/userid"/>
+                        android:text="" />
+
                     <Button
-                        android:text="@string/copy"
+                        android:id="@+id/copy_userid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:id="@+id/copy_userid" />
+                        android:text="@string/copy"
+                        android:visibility="gone" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -293,11 +297,11 @@
                                 android:textStyle="bold" />
 
                             <com.facebook.drawee.view.SimpleDraweeView
-                                    android:id="@+id/attributes_collapse_icon"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
-                                    android:layout_gravity="bottom" />
+                                android:id="@+id/attributes_collapse_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
                         </LinearLayout>
 

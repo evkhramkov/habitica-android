@@ -2,7 +2,8 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:listSeparatorTextViewStyle">@style/MyOwnListSeperatorTextViewStyle</item>
+        <item name="android:listSeparatorTextViewStyle">@style/MyOwnListSeperatorTextViewStyle
+        </item>
 
         <item name="android:elevation" tools:targetApi="21">0dp</item>
         <item name="elevation">0dp</item>
@@ -46,16 +47,14 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="AppTheme.ActionBar.Transparent">
-    </style>
-    
+    <style name="AppTheme.ActionBar.Transparent"></style>
+
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.Transparent">
-    </style>
+    <style name="AppTheme.NoActionBar.Transparent"></style>
 
     <style name="AppThemeWithActionBarBlackText" parent="AppTheme.ActionBar">
         <item name="android:textColorPrimary">@android:color/black</item>
@@ -170,7 +169,7 @@
         <item name="android:divider">?android:listDivider</item>
         <item name="android:showDividers">middle</item>
     </style>
-    
+
     <style name="BottomMenuItem">
         <item name="android:padding">@dimen/bottom_menu_padding</item>
         <item name="android:background">@drawable/selection_highlight</item>
@@ -207,7 +206,8 @@
 
     <style name="SubscriptionListTitle" parent="GemPurchaseListItem">
         <item name="android:layout_gravity">left|center_vertical</item>
-        <item name="android:fontFamily" tools:targetApi="jelly_bean">@string/font_family_medium</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@string/font_family_medium
+        </item>
         <item name="android:textSize">14sp</item>
     </style>
 

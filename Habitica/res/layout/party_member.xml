@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                                    xmlns:tools="http://schemas.android.com/tools"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    style="@style/CardView.Default"
-                                    android:clickable="true"
-                                    android:foreground="?android:attr/selectableItemBackground">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardView.Default"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <LinearLayout
+        style="@style/CardContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/CardContent"
         android:orientation="horizontal">
 
         <com.habitrpg.android.habitica.ui.AvatarView
@@ -73,8 +73,8 @@
                             android:layout_margin="5dp"
                             android:ellipsize="middle"
                             android:lines="1"
-                            tools:text="class"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            tools:text="class" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

@@ -8,6 +8,6 @@
     <item
         android:id="@+id/menu.guild.leave"
         android:orderInCategory="1"
-        app:showAsAction="never"
-        android:title="@string/leave" />
+        android:title="@string/leave"
+        app:showAsAction="never" />
 </menu>

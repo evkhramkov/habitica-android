@@ -17,7 +17,7 @@
         <item name="android:letterSpacing" tools:targetApi="lollipop">0.071</item>
     </style>
 
-    <style name="Title1_WideLetterSpacing"  parent="@style/Title1">
+    <style name="Title1_WideLetterSpacing" parent="@style/Title1">
         <item name="android:letterSpacing" tools:targetApi="lollipop">0.133</item>
     </style>
 

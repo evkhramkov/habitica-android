@@ -5,7 +5,7 @@ public class RxJavaTestPlugins extends RxJavaPlugins {
         super();
     }
 
-    public static void resetPlugins(){
+    public static void resetPlugins() {
         getInstance().reset();
     }
 }

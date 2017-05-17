@@ -104,8 +104,8 @@
                     style="@style/Body1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Leader name"
-                    android:textColor="#6133b4" />
+                    android:textColor="#6133b4"
+                    tools:text="Leader name" />
 
 
             </LinearLayout>

@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              style="@style/RowWrapper"
-              android:clickable="true"
-              android:background="@android:color/white">
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RowWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:clickable="true">
+
     <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/imageView"
-            android:layout_width="@dimen/gear_image_size"
-            android:layout_height="@dimen/gear_image_size"
-            android:scaleType="fitEnd"
-            android:layout_marginRight="@dimen/row_padding"/>
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/gear_image_size"
+        android:layout_height="@dimen/gear_image_size"
+        android:layout_marginRight="@dimen/row_padding"
+        android:scaleType="fitEnd" />
+
     <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleView"
+            style="@style/Subheader1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_vertical">
+            tools:text="Title" />
+
         <TextView
-                android:id="@+id/titleView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Title"
-                style="@style/Subheader1" />
+            android:id="@+id/limitedCountText"
+            style="@style/Caption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:text="2 Left" />
+
         <TextView
-                android:id="@+id/limitedCountText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="visible"
-                tools:text="2 Left"
-                style="@style/Caption3" />
-        <TextView
-                android:id="@+id/descriptionView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Description"
-                android:maxLines="5"
-                style="@style/Caption2.Regular" />
+            android:id="@+id/descriptionView"
+            style="@style/Caption2.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            tools:text="Description" />
     </LinearLayout>
 
     <Button
-            android:id="@+id/buyButton"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:minWidth="64dp"
-            android:layout_gravity="center_vertical"
-            android:gravity="left|center_vertical"
-            android:drawablePadding="5dp"
-            android:background="@drawable/rounded_purple_square"
-            android:paddingLeft="12dp"
-            android:paddingStart="12dp"
-            android:paddingRight="12dp"
-            android:paddingEnd="12dp"
-            android:textColor="@color/white"
-            tools:text="150"
-            android:textSize="15sp" />
+        android:id="@+id/buyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/rounded_purple_square"
+        android:drawablePadding="5dp"
+        android:gravity="left|center_vertical"
+        android:minWidth="64dp"
+        android:paddingEnd="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingStart="12dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:text="150" />
+
     <TextView
-            android:id="@+id/unlockView"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            tools:text="Description"
-            android:visibility="gone"
-            android:maxLines="5"
-            style="@style/RowText"
-            android:layout_gravity="center_vertical"/>
+        android:id="@+id/unlockView"
+        style="@style/RowText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:maxLines="5"
+        android:visibility="gone"
+        tools:text="Description" />
 </LinearLayout>

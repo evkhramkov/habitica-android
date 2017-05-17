@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/container_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
     android:background="@color/brand_300"
-    android:id="@+id/container_view"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/subtitleTextView"
+        style="@style/Body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/subtitleTextView"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
         android:gravity="center_horizontal"
-        style="@style/Body2"
-        android:textSize="17sp"
         android:textColor="@color/white"
-        tools:text="@string/intro_2_subtitle"
-        android:layout_marginBottom="4dp" />
+        android:textSize="17sp"
+        tools:text="@string/intro_2_subtitle" />
 
     <ImageView
         android:id="@+id/titleImageView"
@@ -30,35 +30,35 @@
         android:contentDescription="@string/brand_name" />
 
     <TextView
+        android:id="@+id/titleTextView"
+        style="@style/Title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titleTextView"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="28dp"
         android:gravity="center_horizontal"
-        style="@style/Title1"
-        android:textSize="30sp"
         android:textColor="@color/white"
-        tools:text="@string/intro_2_title"
-        android:layout_marginBottom="28dp" />
+        android:textSize="30sp"
+        tools:text="@string/intro_2_title" />
 
     <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/intro_2"
         app:srcCompat="@drawable/intro_2" />
 
     <TextView
+        android:id="@+id/descriptionTextView"
+        style="@style/Body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/descriptionTextView"
         android:layout_gravity="center_horizontal"
-        style="@style/Body2"
-        android:textColor="@android:color/white"
         android:layout_margin="28dp"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="4dp"
         android:maxWidth="350dp"
-        tools:text="@string/intro_2_description"/>
+        android:textColor="@android:color/white"
+        tools:text="@string/intro_2_description" />
 </LinearLayout>

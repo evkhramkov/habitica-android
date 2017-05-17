@@ -94,8 +94,8 @@
                 android:id="@+id/sourceCodeLink"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="20sp"
+                android:gravity="center"
                 android:text="@string/about.habitica_open_source"
                 android:textSize="@dimen/abc_text_size_small_material" />
 
@@ -116,8 +116,8 @@
                 android:id="@+id/versionInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="30sp"
+                android:gravity="center"
                 android:textSize="@dimen/abc_text_size_small_material" />
 
         </LinearLayout>

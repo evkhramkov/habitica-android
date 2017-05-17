@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.MainActivity"
-        android:fitsSystemWindows="false">
+        android:fitsSystemWindows="false"
+        tools:context=".ui.activities.MainActivity">
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -25,11 +26,11 @@
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:titleEnabled="false"
                 app:contentScrim="?attr/colorPrimary"
                 app:expandedTitleMarginEnd="?attr/actionBarSize"
                 app:expandedTitleMarginStart="0dp"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
 
                 <include
                     android:id="@+id/avatar_with_bars"
@@ -71,40 +72,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="bottom|center_horizontal"
             android:layout_alignParentBottom="true"
-            app:layout_behavior="com.habitrpg.android.habitica.ui.helpers.FloatingActionMenuBehavior"
-            android:padding="0dp">
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:padding="0dp"
+            app:layout_behavior="com.habitrpg.android.habitica.ui.helpers.FloatingActionMenuBehavior">
+
             <android.support.design.widget.CoordinatorLayout
                 android:id="@+id/floating_menu_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
-                android:layout_marginBottom="-5dp"
-                />
+                android:layout_marginBottom="-5dp" />
+
             <com.roughike.bottombar.BottomBar
                 android:id="@+id/bottom_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@color/brand_100"
-                app:bb_tabXmlResource="@xml/main_menu_tasks"
-                app:bb_inActiveTabColor="@color/brand_500"
-                app:bb_activeTabColor="@color/white"
-                app:bb_behavior="underNavbar"
-                app:bb_badgesHideWhenActive="true"
-                app:bb_badgeBackgroundColor="@color/brand_400"
                 android:layout_gravity="bottom"
                 android:layout_margin="0dp"
-                />
+                android:background="@color/brand_100"
+                app:bb_activeTabColor="@color/white"
+                app:bb_badgeBackgroundColor="@color/brand_400"
+                app:bb_badgesHideWhenActive="true"
+                app:bb_behavior="underNavbar"
+                app:bb_inActiveTabColor="@color/brand_500"
+                app:bb_tabXmlResource="@xml/main_menu_tasks" />
 
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
+
     <FrameLayout
+        android:id="@+id/overlayFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/overlayFrameLayout"
         android:clickable="false"
-        android:fitsSystemWindows="true"
-        />
+        android:fitsSystemWindows="true" />
 </FrameLayout>

@@ -5,7 +5,10 @@
             <solid android:color="@color/brand_100" />
         </shape>
     </item>
-    <item android:left="0dp" android:right="0dp" android:gravity="bottom">
+    <item
+        android:gravity="bottom"
+        android:left="0dp"
+        android:right="0dp">
         <bitmap android:src="@drawable/customization_shadow" />
     </item>
 </layer-list>

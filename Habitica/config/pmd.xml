@@ -18,8 +18,7 @@ Severity: EASY
         <exclude name="AvoidUsingHardCodedIP" />
     </rule>
 
-    <rule ref="rulesets/java/braces.xml">
-    </rule>
+    <rule ref="rulesets/java/braces.xml"></rule>
 
     <rule ref="rulesets/java/clone.xml" />
 
@@ -84,9 +83,9 @@ Severity: EASY
     <rule ref="rulesets/java/imports.xml" />
 
     <rule ref="rulesets/java/junit.xml">
-      <exclude name="JUnitTestsShouldIncludeAssert" />
-      <exclude name="JUnitAssertionsShouldIncludeMessage" />
-      <exclude name="JUnitTestContainsTooManyAsserts" />
+        <exclude name="JUnitTestsShouldIncludeAssert" />
+        <exclude name="JUnitAssertionsShouldIncludeMessage" />
+        <exclude name="JUnitTestContainsTooManyAsserts" />
     </rule>
 
     <rule ref="rulesets/java/logging-jakarta-commons.xml">

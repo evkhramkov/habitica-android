@@ -8,15 +8,15 @@
     <CheckBox
         android:id="@+id/challenge_filter_group_checkbox"
         android:layout_width="50dp"
-        android:checked="true"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:checked="true"
+        android:text="" />
 
     <TextView
         android:id="@+id/challenge_filter_group_label"
+        style="@style/Subheader2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Subheader2"
-        tools:text="Tavern"/>
+        tools:text="Tavern" />
 
 </LinearLayout>

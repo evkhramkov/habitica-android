@@ -54,9 +54,9 @@
                 <net.pherth.android.emoji_library.EmojiTextView
                     android:id="@+id/checkedTextView"
                     style="@style/Subheader3"
-                    android:textColor="#000"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#000"
                     tools:text="Daily Title" />
 
                 <net.pherth.android.emoji_library.EmojiTextView
@@ -68,12 +68,11 @@
                     tools:text="Notes" />
 
                 <TextView
-                        android:id="@+id/approvalRequiredTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/Caption4"
-                        android:text="@string/pending_approval"
-                        />
+                    android:id="@+id/approvalRequiredTextField"
+                    style="@style/Caption4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pending_approval" />
 
                 <LinearLayout
                     android:id="@+id/taskIconWrapper"
@@ -84,36 +83,36 @@
 
                     <TextView
                         android:id="@+id/specialTaskText"
+                        style="@style/Caption3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableStart="@drawable/task_icon_calendar"
                         android:drawableLeft="@drawable/task_icon_calendar"
+                        android:drawableStart="@drawable/task_icon_calendar"
                         android:textColor="@color/task_secondary_text"
                         android:visibility="invisible"
-                        style="@style/Caption3"
-                        tools:visibility="visible"
-                        tools:text="special"  />
+                        tools:text="special"
+                        tools:visibility="visible" />
 
                     <TextView
                         android:id="@+id/streakTextView"
+                        style="@style/Caption3"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/task_icon_size"
-                        android:layout_marginStart="@dimen/task_icon_space"
                         android:layout_marginLeft="@dimen/task_icon_space"
-                        android:drawableStart="@drawable/task_icon_streak"
+                        android:layout_marginStart="@dimen/task_icon_space"
                         android:drawableLeft="@drawable/task_icon_streak"
-                        android:textColor="@color/task_secondary_text"
-                        tools:text="10"
+                        android:drawableStart="@drawable/task_icon_streak"
                         android:gravity="center_vertical"
-                            style="@style/Caption3" />
+                        android:textColor="@color/task_secondary_text"
+                        tools:text="10" />
 
                     <ImageView
                         android:id="@+id/iconviewChallenge"
                         android:layout_width="@dimen/task_icon_size"
                         android:layout_height="@dimen/task_icon_size"
-                        android:layout_marginStart="@dimen/task_icon_space"
                         android:layout_marginLeft="@dimen/task_icon_space"
+                        android:layout_marginStart="@dimen/task_icon_space"
                         android:contentDescription="@string/belongs_to_challenge"
                         app:srcCompat="@drawable/task_icon_challenge" />
 
@@ -121,8 +120,8 @@
                         android:id="@+id/iconviewReminder"
                         android:layout_width="@dimen/task_icon_size"
                         android:layout_height="@dimen/task_icon_size"
-                        android:layout_marginStart="@dimen/task_icon_space"
                         android:layout_marginLeft="@dimen/task_icon_space"
+                        android:layout_marginStart="@dimen/task_icon_space"
                         android:contentDescription="@string/has_reminder"
                         app:srcCompat="@drawable/task_icon_reminder" />
 
@@ -130,8 +129,8 @@
                         android:id="@+id/iconviewTag"
                         android:layout_width="@dimen/task_icon_size"
                         android:layout_height="@dimen/task_icon_size"
-                        android:layout_marginStart="@dimen/task_icon_space"
                         android:layout_marginLeft="@dimen/task_icon_space"
+                        android:layout_marginStart="@dimen/task_icon_space"
                         android:contentDescription="@string/has_tag"
                         app:srcCompat="@drawable/task_icon_tag" />
                 </LinearLayout>
@@ -147,11 +146,11 @@
 
                 <TextView
                     android:id="@+id/checkListCompletedTextView"
+                    style="@style/Body3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    style="@style/Body3"
                     tools:text="1" />
 
                 <View
@@ -162,11 +161,11 @@
 
                 <TextView
                     android:id="@+id/checkListAllTextView"
+                    style="@style/Body3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    style="@style/Body3"
                     tools:text="13" />
             </LinearLayout>
         </LinearLayout>

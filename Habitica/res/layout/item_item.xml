@@ -2,46 +2,62 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bind="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
-        <variable name="title" type="String"/>
-        <variable name="value" type="String"/>
-        <variable name="imageNamed" type="String"/>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="value"
+            type="String" />
+
+        <variable
+            name="imageNamed"
+            type="String" />
+
         <variable
             name="disabled"
             type="Boolean" />
     </data>
+
     <LinearLayout
+        style="@style/RowWrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/RowWrapper"
         android:clickable="true">
+
         <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="@dimen/gear_image_size"
             android:layout_height="@dimen/gear_image_size"
-            bind:imageName='@{imageNamed == null ? "head_0" : imageNamed}'
-            android:contentDescription="@{imageNamed}"
+            android:layout_marginRight="@dimen/row_padding"
             android:alpha="@{imageNamed == null || disabled ? 0.3f : 1.0f}"
+            android:contentDescription="@{imageNamed}"
             android:scaleType="fitEnd"
-            android:layout_marginRight="@dimen/row_padding"/>
+            bind:imageName='@{imageNamed == null ? "head_0" : imageNamed}' />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{title}"
-                tools:text="Title"
                 style="@style/RowTitle"
-                android:alpha="@{disabled ? 0.3f : 1.0f}" />
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Value"
-                android:text="@{value}"
+                android:alpha="@{disabled ? 0.3f : 1.0f}"
+                android:text="@{title}"
+                tools:text="Title" />
+
+            <TextView
                 style="@style/RowText"
-                android:alpha="@{disabled ? 0.3f : 1.0f}" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="@{disabled ? 0.3f : 1.0f}"
+                android:text="@{value}"
+                tools:text="Value" />
         </LinearLayout>
     </LinearLayout>
 </layout>

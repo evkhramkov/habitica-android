@@ -19,7 +19,7 @@
             android:layout_gravity="center_vertical"
             android:layout_margin="12dp"
             android:scaleType="center"
-            tools:src="@drawable/custom_reward"/>
+            tools:src="@drawable/custom_reward" />
 
         <LinearLayout
             android:id="@+id/textReward"
@@ -46,15 +46,14 @@
                 style="@style/Caption2.Regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Notes"/>
+                tools:text="Notes" />
 
             <TextView
-                    android:id="@+id/approvalRequiredTextField"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Caption4"
-                    android:text="@string/pending_approval"
-                    />
+                android:id="@+id/approvalRequiredTextField"
+                style="@style/Caption4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pending_approval" />
 
         </LinearLayout>
 
@@ -62,22 +61,22 @@
             android:id="@+id/btnReward"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:minWidth="64dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:gravity="left|center_vertical"
-            android:drawablePadding="5dp"
             android:background="@drawable/rounded_purple_square"
             android:drawableLeft="@drawable/ic_header_gold"
+            android:drawablePadding="5dp"
             android:drawableStart="@drawable/ic_header_gold"
-            android:paddingLeft="12dp"
-            android:paddingStart="12dp"
-            android:paddingRight="12dp"
+            android:gravity="left|center_vertical"
+            android:minWidth="64dp"
             android:paddingEnd="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingStart="12dp"
             android:textColor="@color/white"
-            tools:text="150"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            tools:text="150" />
     </LinearLayout>
 
     <View
