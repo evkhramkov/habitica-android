@@ -176,9 +176,6 @@ android {
             minSdkVersion 21
         }
 
-        prod {
-        }
-
         amazon {
             buildConfigField "String", "STORE", "\"amazon\""
         }
